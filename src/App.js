@@ -13,9 +13,11 @@ function App() {
         <Header>
 
         </Header>
-        <Route path='/' component={Home} />
-        <Route path='/movie/:imdbID' component={MovieDetails} />
-        <Route component={PageNotFound} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/movie/:imdbID' component={MovieDetails} />
+          <Route component={PageNotFound} />
+        </Switch>
       </Router>
       <Footer>
 
